@@ -41,7 +41,7 @@ header {
 
       rgba(211, 205, 205, 0.15) 70%
     ),
-    url("../Img/japan-homes.jpg");
+    url("./Img/japan-homes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
