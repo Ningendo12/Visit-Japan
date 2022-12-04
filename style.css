@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Monyline";
+  src: url("../Fonts/Monyline.ttf");
+
+  font-family: "Atlanta-College";
+  src: url("../Fonts/Atlanta-College.ttf");
+
+  font-family: "Bogista";
+  src: url("../Fonts/Bogista.ttf");
+}
+
+/* End Fonts */
+
+/* body {
+
+} */
+
+/* Header Elements/Childs */
+
+header {
+  position: relative;
+  background-image: linear-gradient(
+      120deg,
+      rgba(211, 205, 205, 0.15) 20%,
+
+      rgba(250, 250, 250, 0.65) 20%,
+      rgba(29, 29, 29, 0.65) 20%,
+
+      rgba(250, 250, 250, 0.65) 20%,
+      rgba(29, 29, 29, 0.65) 20%,
+
+      rgba(29, 29, 29, 0.65) 80%,
+
+      rgba(211, 205, 205, 0.15) 70%
+    ),
+    url("../Img/japan-homes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+.main-visit-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* .main-visit-content {
+} */
+
+.visit-text {
+  display: block;
+  font-size: 35px;
+  color: aliceblue;
+  letter-spacing: 13px;
+  font-weight: 1000;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  animation: ElementOpenFromBottom 2s;
+}
+
+.visit-tours {
+  display: block;
+  font-size: 22px;
+  margin-top: 35px;
+  color: aliceblue;
+  letter-spacing: 13px;
+  font-weight: 1000;
+  font-style: italic;
+  font-family: "Atlanta-College";
+  animation: ElementOpenFromRight 2s;
+}
+
+.meet-text {
+  margin-bottom: 45px;
+}
+
+.btn-tour-visit:link,
+.btn-tour-visit:visited {
+  position: relative;
+  text-decoration: none;
+  padding: 15px 50px;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: "Bogista";
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.btn-color {
+  color: rgb(27, 26, 26);
+}
+
+.btn-tour-visit:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  transition: all 0.4s;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.btn-tour-visit:hover::after {
+  transform: scaleX(1.5) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn-color:after {
+  background-color: white;
+}
+
+.btn-animation {
+  animation: ButtonFromBottom 2s;
+  animation-fill-mode: backwards;
+}
+/* End Header Elements/Childs */
+
+/* Animation */
+
+@keyframes ElementOpenFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ElementOpenFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ButtonFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* END Animation */
