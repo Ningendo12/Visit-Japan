@@ -1,0 +1,195 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* Varables */
+
+/* Color Varables */
+
+$dark-color: rgba(29, 29, 29, 0.65);
+$silver-color: rgba(250, 250, 250, 0.65);
+$light-dark: rgba(211, 205, 205, 0.15);
+$text-color-aliceblue: aliceblue;
+
+/* End Color Varables */
+/* END Varables */
+
+/* Fonts */
+
+@font-face {
+  font-family: "Monyline";
+  src: url("../Fonts/Monyline.ttf");
+
+  font-family: "Atlanta-College";
+  src: url("../Fonts/Atlanta-College.ttf");
+
+  font-family: "Bogista";
+  src: url("../Fonts/Bogista.ttf");
+}
+
+/* End Fonts */
+
+/* body {
+
+} */
+
+/* Header Elements/Childs */
+
+header {
+  position: relative;
+  background-image: linear-gradient(
+      120deg,
+      $light-dark 20%,
+      $silver-color 20%,
+      $dark-color 20%,
+      $silver-color 20%,
+      $dark-color 20%,
+      $dark-color 80%,
+      $light-dark 70%
+    ),
+    url("./Img/japan-homes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+.main-visit-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* .main-visit-content {
+} */
+
+.visit-text {
+  display: block;
+  font-size: 3.5rem;
+  color: $text-color-aliceblue;
+  letter-spacing: 0.3rem;
+  font-weight: 1000;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  animation: ElementOpenFromBottom 2s;
+}
+
+.visit-tours {
+  display: block;
+  font-size: 2.2rem;
+  margin-top: 3.5rem;
+  color: $text-color-aliceblue;
+  letter-spacing: 1.3rem;
+  font-weight: 1000;
+  font-style: italic;
+  font-family: "Atlanta-College";
+  animation: ElementOpenFromRight 2s;
+}
+
+.meet-text {
+  margin-bottom: 4.5rem;
+}
+
+.btn-tour-visit:link,
+.btn-tour-visit:visited {
+  position: relative;
+  text-decoration: none;
+  padding: 1.5rem 5rem;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  font-family: "Bogista";
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+.btn-color {
+  color: rgb(27, 26, 26);
+}
+
+.btn-tour-visit:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  transition: all 0.4s;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+}
+.btn-tour-visit:hover::after {
+  transform: scaleX(1.5) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn-color:after {
+  background-color: white;
+}
+
+.btn-animation {
+  animation: ButtonFromBottom 2s;
+  animation-fill-mode: backwards;
+}
+/* End Header Elements/Childs */
+
+/* Animation */
+
+@keyframes ElementOpenFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes ElementOpenFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ButtonFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* END Animation */
